@@ -89,7 +89,6 @@ def evaluate_model(model, data_loader, device):
         char_accuracy = accuracy_score(char_all_labels, char_all_preds)
         char_precision = precision_score(char_all_labels, char_all_preds, average='macro', zero_division=0)
         char_recall = recall_score(char_all_labels, char_all_preds, average='macro', zero_division=0)
-        breakpoint()
 
         # get the confusion matrix
         unique_chars = [i for i in range(10)]

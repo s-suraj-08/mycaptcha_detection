@@ -3,3 +3,6 @@ dataset/*
 output/*/checkpoints/*
 
 Computer Vision Test.pdf
+
+train_confusion_matrix.png
+validation_confusion_matrix.png
