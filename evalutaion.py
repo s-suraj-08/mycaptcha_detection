@@ -89,6 +89,7 @@ def evaluate_model(model, data_loader, device):
         char_accuracy = accuracy_score(char_all_labels, char_all_preds)
         char_precision = precision_score(char_all_labels, char_all_preds, average='macro', zero_division=0)
         char_recall = recall_score(char_all_labels, char_all_preds, average='macro', zero_division=0)
+        breakpoint()
 
         # get the confusion matrix
         unique_chars = [i for i in range(10)]
@@ -135,7 +136,8 @@ def inference(config):
     plot_confusion_matrix(val_cm, "Validation Set Confusion Matrix", "validation_confusion_matrix.png")
 
 if __name__ == "__main__":
-    rundir = './output/best_run'
+    import sys
+    rundir = sys.argv[1]
     config_file_path = os.path.join(rundir, 'config_backup.yaml')
     config = load_config_yaml(config_file_path)
 
