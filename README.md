@@ -1,6 +1,8 @@
 # Captcha Detection
 Aim is to detect the captcha provided in the image. The image is first pre-processed followed by a CNN+LSTM model which predicts the characters.
 
+The readme provides the install and run instructions. Followed by the results and report.
+
 ## Installation
 Install the requirements in a new conda environment:
 ```bash
