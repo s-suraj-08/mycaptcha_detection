@@ -1,0 +1,25 @@
+data:
+  csv_path: "dataset/captcha_data.csv"
+  train_root: "dataset/train-images/train-images/"
+  val_root: "dataset/validation-images/validation-images/"
+  to_visualize_data: True
+  vis_mask: True
+
+data_transforms:
+  elastic: False
+  noise: False
+  dilation_erosion: False
+  translation: False
+
+hyperparameters:
+  batch_size: 32
+  lr: 0.001
+  weight_decay: 0.0001
+  which_loss: ctc
+  epochs: 10
+  which_model: crnn
+
+general:
+  run_name: 2_run_crnn_no_val_transforms
+  output: output
+  save_freq: 1
