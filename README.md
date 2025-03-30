@@ -95,9 +95,14 @@ CNN + LSTM model with CTC loss and an additional blank(dummy) class added. Num c
 Strengths:
 - Model size is relatively less (compared to using a pretrained model).
 - Hence faster (slightly).
-- Quick to train and accuracy is high.
+- Rekatively quick to train and accuracy is high.
 
 Weakness
 - Preprocessing used works only on the type of image given in the dataset.
 - Model has only seen white and black pixels, and will fail on other colors. And also for different deformations
 - We do not know when or why model fails. System built on this becomes unpredictable.
+
+Area for improvement:
+- Use a stronger base model (like resnet) followed LSTM for better feature extraction
+- Use noisier images and additional captcha datasets for the model to work on differrent type of captchas
+- Use minimal preprocessing (for generic use case) like morphological opening or closing
