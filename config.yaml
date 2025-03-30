@@ -20,6 +20,6 @@ hyperparameters:
   which_model: crnn
 
 general:
-  run_name: 2_run_crnn_no_val_transforms
+  run_name: best_run
   output: output
   save_freq: 1
